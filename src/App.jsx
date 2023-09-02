@@ -35,12 +35,19 @@ function App() {
   
   return (
     <div>
+      <div>
+        <input>
+        </input>
+        <button>Load URL</button>
+        <input onChange={fileSelect} type='file' accept='.jpg, .png'></input>
+      <button onClick={previewClick} style={{border:'1px solid black', width:'fit-content', cursor:'pointer'}}>Preview / Save</button>
 
-      <input style={buttonStyles} onChange={fileSelect} type='file' accept='.jpg, .png'></input>
-      <button onClick={previewClick} style={{position:'absolute', left:'25px', top:'55px', border:'1px solid black', width:'fit-content', cursor:'pointer'}}>Preview / Save</button>
+        </div>
+
+      
       <div style={{border: image ? '2px solid black' : 'none'}}>
 
-      <div id='capture'>
+      <div style={{overflow:'hidden'}}id='capture'>
       <img src={image}></img>
       <Balloon />
       </div>

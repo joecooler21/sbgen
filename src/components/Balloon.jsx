@@ -96,7 +96,7 @@ const Balloon = () => {
                 })}
                 </div>
                 
-              {edit ? <div style ={{...balloonStyles}}><textarea style={textStyles} onChange={textAreaChange}></textarea></div>:
+              {edit ? <div style={balloonStyles}><textarea style={textStyles} onChange={textAreaChange}></textarea></div>:
               <Draggable onStop={endDrag} ><div style={balloonStyles}>{text}</div></Draggable>}
                 
             </div>
